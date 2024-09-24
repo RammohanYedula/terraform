@@ -1,6 +1,6 @@
-variable "instance_names" {
-    type = list 
-    default = ["mongodb","redis","mysql","rabbitmq","catalouge","user","cart","shipping","payment","dispatch","web"]
+variable "isProd" {
+    type = bool 
+    default = true
 }
 
 variable "ami_id" {
@@ -15,3 +15,5 @@ variable "zone_id"{
 variable "domain_name" {
     default = "awsmohan.online"
 }
+
+

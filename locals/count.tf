@@ -1,4 +1,4 @@
-resource "aws_instance" "web" {
+/*resource "aws_instance" "web" {
    #count = 11 # count.index is a special variable given by terraform
    count = length(var.instance_names)
    ami           = var.ami_id #devops-practice
@@ -16,4 +16,13 @@ resource "aws_instance" "web" {
    type    = "A"
    ttl     = 1
    records = [local.ip]
- }
+ }*/
+
+
+  resource "aws_instance" "web" {
+  ami           = var.ami_id #devops-practice
+  instance_type = local.instance_type
+  tags = {
+    Name = "locals"
+  }
+}
