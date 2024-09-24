@@ -5,6 +5,12 @@ terraform {
         version = "5.31.0" # AWS provider version, not terraform version
     }
     }
+    backend "s3" {
+    bucket = "mohan-aws-remote-state-terraform"
+    key    = "foreach"
+    region = "us-east-1"
+    dynamodb_table = "mohan-aws-locking"
+    }
 }
 
 provider "aws" {
