@@ -5,3 +5,7 @@ variable "ami_value" {
 variable "instance_type_value" {
     description = "ami instance type"
 }
+
+variable "subnet_id" {
+    description = "subnet value"
+}
