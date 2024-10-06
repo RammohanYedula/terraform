@@ -23,7 +23,7 @@ resource "aws_instance" "rammohan" {
 
 
 resource "aws_s3_bucket" "s3_bucket" {
-    bucket = "mohan-s3-demo-tf-state"
+    bucket = "mohan-s3-demo-tf-state-1"
 }
 
 
