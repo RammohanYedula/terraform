@@ -30,3 +30,42 @@ variable "igw_tags" {
   type = map 
   default = {}
 }
+
+variable "public_subnets_cidr" {
+  type = list 
+  validation {
+    condition = length(var.public_subnets_cidr) == 2
+    error_message = "Please give 2 public valid subnet CIDR"
+  }
+}
+
+variable "public_subnets_tags" {
+  type = map 
+  default = {}
+}
+
+variable "private_subnets_cidr" {
+   type = list 
+   validation {
+     condition = length(var.private_subnets_cidr) == 2
+    error_message = "Please give 2 public valid subnet CIDR"
+   }
+}
+
+variable "private_subnets_tags" {
+  type = map 
+  default = {}
+}
+
+variable "database_subnets_cidr" {
+   type = list 
+   validation {
+     condition = length(var.database_subnets_cidr) == 2
+    error_message = "Please give 2 public valid subnet CIDR"
+   }
+}
+
+variable "database_subnets_tags" {
+  type = map 
+  default = {}
+}
